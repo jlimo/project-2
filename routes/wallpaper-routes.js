@@ -5,9 +5,9 @@ const wallController = require('../controllers/wallpaper-controller');
 
 
 wallRouter.get('/', wallController.index);
-wallRouter.post('/', wallController.create);
+// wallRouter.post('/', wallController.create);
 
-wallRouter.get('/wallpaper',)
+//wallRouter.get('/')
 
 
 
