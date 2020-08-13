@@ -21,7 +21,11 @@ app.use(methodOverride('_method'));
 app.use(cookieParser());
 app.use(session({
     secret: process.env.SECRET_KEY,
-}))
+    resave: true,
+    saveUninitialized: true,
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 
@@ -36,7 +40,7 @@ app.get('/', (req, res) => {
 app.use('/wallpaper', wallRouter);
 
 app.use('*', (req, res) => {
-    res.status(404),send('Not found');
+    res.status(404).send('Not found');
 });
 
 app.use((err, req, res, next) => {
