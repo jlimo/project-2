@@ -39,7 +39,7 @@ const Wallpaper = require('../models/wallpaper')
              });
          })
          .then((updatedwallpaper) => {
-             res.redirect(`/wallpaper/${updatedwallpaper.id}`);
+            res.redirect(`/wallpaper/${updatedwallpaper.id}`);
          })
          .catch(next);
      },

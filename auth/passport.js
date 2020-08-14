@@ -1,31 +1,18 @@
 const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
+const User = require('../models/User');
 
-const init = require('./passport');
-const User = require('../../models/User');
-const authHelpers = require('./auth-helpers');
+module.exports = () => {
+    passport.serializeUser((user, done) => {
+        done(null, user.username);
+    });
 
-const options = {};
-
-init();
-
-passport.use(
-    new LocalStrategy(options, (username, password, done) => {
+    passport.deserializeUser((username, done) => {
         User.findByUserName(username)
-        .then(user => {
-            if (!user) {
-                return done(null,false);
-            }
-            if (!authHelpers.comparePass(password, user.password_digest)) {
-                return done(null, false);
-            } else {
-                return done(null, user);
-            }
-        }).catch(err => {
-            console.log(err);
-            return done(err);
+        .then((user) => {
+            done(null, user);
+        })
+        .catch((err) => {
+            done(err, null);
         });
-    })
-);
-
-module.exports = passport;
+    });
+};

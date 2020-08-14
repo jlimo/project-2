@@ -4,7 +4,6 @@ class User {
     constructor ({ id, username, password_digest}) {
         this.id = id || null;
         this.username = username;
-        this.email = email;
         this.password_digest = password_digest;
     }
 
