@@ -25,6 +25,7 @@ class User {
             RETURNING *`, this)
             .then((savedUser) => Object.assign(this, savedUser));
     }
+
 }
 
 module.exports = User;

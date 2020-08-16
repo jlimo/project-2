@@ -11,6 +11,6 @@ userRouter.get('/new', authHelpers.loginRedirect, (req, res) => {
     res.render('auth/register');
 });
 
-
+userRouter.post('/', usersController.create);
 
 module.exports = userRouter;

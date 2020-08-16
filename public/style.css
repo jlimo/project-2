@@ -3,31 +3,33 @@ body {
 }
 
 header {
-    background-color: rgb(163, 61, 75);
+    background-color: rgb(0, 0, 0);
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;   
 }
 
-.header-container { 
-    width: 50vw;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 30px 0;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .logo {
     font-size: 2em;
-    color: yellowgreen;
+    color: rgb(10, 202, 36);
     font-weight: bold;
 }
 
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px, 0;
+    padding: 20px 0;
+    font-weight: bold;
     font-size: 2em;
-    color: white;
-    background-color: rgb(163, 61, 75);
+    color: rgb(10, 202, 36);
+    background-color: rgb(0, 0, 0);
 }
+

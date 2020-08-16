@@ -6,7 +6,7 @@ const wallRouter = express.Router();
 wallRouter.get('/', wallController.index);
 wallRouter.post('/', wallController.create);
 
-
+//wallRouter.get('/:id([0-9]+)', wallController.show, wallController.show, 
 
 
 

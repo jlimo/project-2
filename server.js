@@ -18,7 +18,7 @@ require('dotenv').config();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 app.use(cookieParser());
@@ -39,6 +39,9 @@ app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
 
+app.get('/', (req, res) => {
+    res.render('index');
+});
 
 app.use('/wallpapers', wallRouter);
 app.use('/auth', authRouter);
