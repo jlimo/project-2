@@ -1,6 +1,6 @@
 # project-2
 
- Original Design: https://imgur.com/HMFG5OY
+ Schema Diagram: https://imgur.com/HMFG5OY
 
 wireframes: https://imgur.com/RE9I3uP
 
