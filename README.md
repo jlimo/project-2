@@ -1,6 +1,5 @@
 # project-2
 
-think of basics before
  Original Design: https://imgur.com/HMFG5OY
 
 wireframes: https://imgur.com/RE9I3uP
